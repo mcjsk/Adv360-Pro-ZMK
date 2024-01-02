@@ -34,6 +34,7 @@
     };
     rpi: require_prior_idle {
         compatible = "zmk,behavior-hold-tap";
+        label = "rpi";
         #binding-cells = <2>;
         flavor = "tap-preferred";
         tapping-term-ms = <200>;
@@ -71,6 +72,7 @@
     };
     sc0: shift_caps_0 {
         compatible = "zmk,behavior-tap-dance";
+        label = "sc0";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp RSHIFT>, <&kp CAPS>;
