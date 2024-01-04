@@ -42,51 +42,51 @@
         require-prior-idle-ms = <125>;
         bindings = <&kp>, <&kp>;
     };
-    up_lbrace: up_lbrace {
+    uplb: up_left_brace {
         compatible = "zmk,behavior-mod-morph";
-        label = "up_lbrace";
+        label = "up_left_brace";
         #binding-cells = <0>;
         bindings = <&kp LEFT_BRACE>, <&kp UP>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
      };
-    down_rbrace: down_rbrace {
+    dnlb: down_right_brace {
         compatible = "zmk,behavior-mod-morph";
-        label = "down_rbrace";
+        label = "down_right_brace";
         #binding-cells = <0>;
         bindings = <&kp RIGHT_BRACE>, <&kp DOWN>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    left_lparens: left_lparens {
+    llp: left_left_parens {
         compatible = "zmk,behavior-mod-morph";
-        label = "left_lparens";
+        label = "left_left_parens";
         #binding-cells = <0>;
         bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    right_rparens: right_rparens {
+    rrp: right_right_parens {
         compatible = "zmk,behavior-mod-morph";
-        label = "right_rparens";
+        label = "right_right_parens";
         #binding-cells = <0>;
         bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    uscorehyp: uscorehyp {
+    ush: underscore_hyphen {
         compatible = "zmk,behavior-mod-morph";
-        label = "uscorehyp";
+        label = "underscore_hyphen";
         #binding-cells = <0>;
         bindings = <&kp UNDERSCORE>, <&kp MINUS>;
         mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
     };
-    bsdel: bsdel {
+    bsd: backspace_delete {
         compatible = "zmk,behavior-mod-morph";
-        label = "bsdel";
+        label = "backspace_delete";
         #binding-cells = <0>;
         bindings = <&kp BSPC>, <&kp DEL>;
         mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
     };
     sc0: shift_caps_0 {
         compatible = "zmk,behavior-tap-dance";
-        label = "sc0";
+        label = "shift_caps_0";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp RSHIFT>, <&kp CAPS>;
@@ -103,7 +103,7 @@
         &kp TAB      &kp Q     &kp W                 &kp E                  &kp R   &kp T               &none                                                                  &none   &kp Y           &kp U            &kp I     &kp O     &kp P         &kp BSLH
         &kp ESC      &kp A     &kp S                 &kp D                  &kp F   &kp G               &none  &kp LCTRL   &kp LALT                   &kp LGUI  &kp RCTRL      &none   &kp H           &kp J            &kp K     &kp L  &kp SEMI          &kp SQT
  &mt LSHIFT DEL      &kp Z     &kp X                 &kp C          &rpi LSHIFT V   &kp B                                  &kp FSLH                   &kp BSLH                         &kp N   &rpi RSHIFT M        &kp COMMA   &kp DOT  &kp FSLH             &sc0
-          &mo 2  &kp GRAVE  &kp CAPS         &left_lparens         &right_rparens                      &bsdel  &lt 4 TAB  &kp EQUAL                 &uscorehyp  &kp ENTER  &kp SPACE              &up_lbrace     &down_rbrace  &kp LBKT  &kp RBKT            &mo 2
+          &mo 2  &kp GRAVE  &kp CAPS                  &llp                   &rrp                        &bsd  &lt 4 TAB  &kp EQUAL                       &ush  &kp ENTER  &kp SPACE                   &uplb            &dnlb  &kp LBKT  &kp RBKT            &mo 2
             >;
         };
 
