@@ -77,11 +77,11 @@
         bindings = <&kp UNDERSCORE>, <&kp MINUS>;
         mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
     };
-    dt: delete_tab {
+    bst: backspace_tab {
         compatible = "zmk,behavior-mod-morph";
-        label = "delete_tab";
+        label = "backspace_tab";
         #binding-cells = <0>;
-        bindings = <&kp DEL>, <&kp TAB>;
+        bindings = <&kp BSPC>, <&kp TAB>;
         mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
     };
     sc0: shift_caps_0 {
@@ -103,7 +103,7 @@
         &kp TAB      &kp Q     &kp W                 &kp E                  &kp R   &kp T               &none                                                                  &none   &kp Y           &kp U            &kp I     &kp O     &kp P         &kp BSLH
         &kp ESC      &kp A     &kp S                 &kp D                  &kp F   &kp G               &none  &kp LCTRL   &kp LALT                   &kp LGUI  &kp RCTRL      &none   &kp H           &kp J            &kp K     &kp L  &kp SEMI          &kp SQT
  &mt LSHIFT DEL      &kp Z     &kp X                 &kp C          &rpi LSHIFT V   &kp B                                  &kp BSLH                   &kp FSLH                         &kp N   &rpi RSHIFT M        &kp COMMA   &kp DOT  &kp FSLH             &sc0
-          &mo 2  &kp GRAVE  &kp CAPS                  &llp                   &rrp                    &kp BSPC  &lt 4 &dt  &kp EQUAL                       &ush  &kp ENTER  &kp SPACE                   &uplb            &dnlb  &kp LBKT  &kp RBKT            &mo 2
+          &mo 2  &kp GRAVE  &kp CAPS                  &llp                   &rrp                        &bst  &lt 4 DEL  &kp EQUAL                       &ush  &kp ENTER  &kp SPACE                   &uplb            &dnlb  &kp LBKT  &kp RBKT            &mo 2
             >;
         };
 
